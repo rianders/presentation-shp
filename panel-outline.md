@@ -2,7 +2,7 @@
 
 *Panel with Jey and Rey. Rick Anderson moderating.*
 
-**Panelists:** Rey (OSCE Simulation) and Jey (Lexus)
+**Panelists:** Rey Riordan (OSCE Simulation) and Jey Labadorf (Lexus)
 **Format:** 10–15 minutes each, then 15 minutes of discussion leading into audience questions
 **Premise:** Both have been students working with faculty on AI projects that had an early life at Rutgers. They navigated the University, its units, and the work of figuring out what a project needed and how to make it happen here.
 **Why it matters:** These stories are for faculty, staff, and administration. They're the student side of the morning talk (`talk-outline.md`).
@@ -17,20 +17,20 @@
 
 ## 2 · The panelists
 
-- **On screen:** Rey, OSCE Simulation. Jey, Lexus.
+- **On screen:** Rey Riordan, OSCE Simulation. Jey Labadorf, Lexus.
 - **Say:** How faculty found you, or how you found the faculty. The projects changed along the way.
 
 ## 3 · How this works
 
 - **On screen:** 10–15 minutes each · 15 minutes of discussion · then the room.
 
-## 4 · Rey (10–15 min)
+## 4 · Rey Riordan (10–15 min)
 
-- **On screen:** Rey. OSCE Simulation.
+- **On screen:** Rey Riordan. OSCE Simulation.
 
-## 5 · Jey (10–15 min)
+## 5 · Jey Labadorf (10–15 min)
 
-- **On screen:** Jey. Lexus.
+- **On screen:** Jey Labadorf. Lexus.
 
 ## 6–11 · Discussion questions (15 min)
 
@@ -53,6 +53,5 @@ One question per slide, in this order:
 
 ## Open Items
 
-- [ ] Rey and Jey's full names and titles for the panelist slide
-- [ ] Confirm Rey is the OSCE Simulation project and Jey is Lexus
+- [ ] Rey and Jey's titles or programs, if you want them on the panelist slide
 - [ ] Optional prep meeting with Rey and Jey before the panel
