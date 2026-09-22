@@ -3,7 +3,7 @@
 Two talks for SHP and IT faculty, by Rick Anderson, Director of Emerging Technology, Rutgers UOES.
 
 - **From classroom to campus service** — the morning talk. Source: [`talk-outline.md`](talk-outline.md), deck: [`slides.html`](slides.html)
-- **Students building AI at Rutgers** — the afternoon panel with Jey and Rey. Source: [`panel-outline.md`](panel-outline.md), deck: [`panel-slides.html`](panel-slides.html)
+- **Students building AI at Rutgers** — the afternoon panel with Rey and Jey. Source: [`panel-outline.md`](panel-outline.md), deck: [`panel-slides.html`](panel-slides.html)
 
 The outlines are the source of truth. The decks are derived from them.
 

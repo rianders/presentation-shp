@@ -21,7 +21,7 @@ A 45-minute lessons-learned talk for SHP and IT faculty at Rutgers. Title: **Fro
 talk-outline.md      Source of truth for content, timing, stories, touch points
 AGENTS.md            This file
 journey.svg          Four-stage pathway diagram (1600x900, slide-ready)
-panel-outline.md     Source of truth for the afternoon panel with Jey and Rey
+panel-outline.md     Source of truth for the afternoon panel with Rey and Jey
 panel-prep.md        Journey questions to send the panelists before the panel
 panel-slides.html    Panel deck, derived from panel-outline.md (same design and keys)
 slides.html          HTML slide deck, derived from talk-outline.md. Keys: arrows/space move,
@@ -64,7 +64,7 @@ Derive slides and speaker notes from `talk-outline.md` and keep that file author
 ## Content rules
 
 - **Do not invent project details.** Bracketed placeholders like `[Fill in: ...]` stay as placeholders until Rick supplies the content. List them under Open Items in `talk-outline.md`.
-- Use names exactly as spelled here: Jim Samuel, Carmela Scala, Sonia Yaco, Bala Desinghu, Claire Warwick, Dr. Siobhan Corbett, Rey Riordan, Rebecca Brody, Scott Parrot, Rahul Mittal, Jey Labadorf, Laura Ramírez, Barbara Tufuto, Tom Vossler, Andy Paige, Eric Marshall.
+- Use names exactly as spelled here: Jim Samuel, Carmela Scala, Sonia Yaco, Bala Desinghu, Claire Warwick, Siobhan Corbett, Rey Riordan, Rebecca Brody, Scott Parrot, Rahul Mittal, Jey Labadorf, Laura Ramírez, Barbara Tufuto, Tom Vossler, Andy Paige, Eric Marshall.
 - Platform names: Ollama, Amarel (OARC's cluster), Chameleon Cloud, Google Colab, Hugging Face, OpenRouter, Portkey, Amazon Bedrock, AgentCore, Shibboleth.
 - Portkey, Shibboleth, and RU Cloud (AWS) are grouped as centrally supported tools, hosted or managed by OIT and Andy, that take technical expertise to engage with. They belong in Stage 4.
 - Do not describe features of Portkey or the AWS relationship in detail. Those belong to Andy and Eric's talk.
@@ -78,7 +78,7 @@ Derive slides and speaker notes from `talk-outline.md` and keep that file author
 | 5. Stage 1, Teaching the tech | Jim Samuel: his students get a client and use the latest AI tech. Emotional accuracy in LLM translation, then guardrails for a postpartum chatbot. |
 | 6. Stage 2, Research | Sonia Yaco, "What can AI do with special collections?" (The American Archivist, 2025; with Desinghu, then at OARC, Warwick, and Rick) and Chameleon Cloud, automated with AI agents to ease IT management. Lexus began here too, which bridges to Stage 3. |
 | 7. Stage 3, Student and departmental use | Lexus: it got the Dean's grant and student support. Rahul Mittal and Jey Labadorf, with Barbara Tufuto, Scott Parrot, and others. |
-| 10. Closing thoughts | Students are building this. With no dedicated resource, involving students is a practical decision, and they should be learning from it. Can we create more support for them? Points ahead to the panel with Jey and Rey later that day. |
+| 10. Closing thoughts | Students are building this. With no dedicated resource, involving students is a practical decision, and they should be learning from it. Can we create more support for them? Points ahead to the panel with Rey and Jey later that day. |
 | 8. Stage 4, University services | VHS (Brody, via Parrot): a chatbot/GPT project becoming a standalone service project for students. |
 
 | 4. The pathway | OSCE Simulation (Corbett and Riordan): research that became an educational tool, so movement isn't one way. |

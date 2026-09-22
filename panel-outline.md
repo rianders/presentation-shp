@@ -1,6 +1,6 @@
 # Students Building AI at Rutgers
 
-*Panel with Jey and Rey. Rick Anderson moderating.*
+*Panel with Rey and Jey. Rick Anderson moderating.*
 
 **Panelists:** Rey Riordan (OSCE Simulation) and Jey Labadorf (Lexus)
 **Format:** 10–15 minutes each, then 15 minutes of discussion leading into audience questions
@@ -13,7 +13,7 @@
 
 ## 1 · Title
 
-- **On screen:** Students building AI at Rutgers. Jey and Rey, moderated by Rick Anderson.
+- **On screen:** Students building AI at Rutgers. Rey and Jey, moderated by Rick Anderson.
 
 ## 2 · The panelists
 

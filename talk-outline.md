@@ -24,7 +24,7 @@
 - **On screen:** Six projects, labeled by where they sit on the pathway.
   - Teaching the tech: Jim Samuel and Carmela Scala
   - Research: Sonia Yaco
-  - Research → teaching: OSCE: Dr. Siobhan Corbett and Rey Riordan
+  - Research → teaching: OSCE: Siobhan Corbett and Rey Riordan
   - Student and dept. use: Lexus: Rahul Mittal and Jey Labadorf; Dean's grant with Barbara Tufuto, Scott Parrot, and others
   - University services: VHS: Rebecca Brody, via Scott Parrot
   - Securing research: Laura Ramírez; runs on a Mac laptop with local AI (Ollama), anonymized PHI data
@@ -77,9 +77,9 @@
 
 ## 10 · Closing thoughts (42–44 min)
 
-- **On screen:** "Students are building this" and "The student perspective: Jey and Rey, on a panel later today"
+- **On screen:** "Students are building this" and "The student perspective: Rey and Jey, on a panel later today"
 - **Say:** Student work is a real situation. Without any dedicated resource, it's a practical decision to have students be part of building these solutions. They should be part of solving the issues and learning from it. The question that arises: can we create more support for them?
-- **Point ahead:** Jey Labadorf and Rey Riordan join me on a panel later today, on their experience as student support on faculty projects that grew into student services.
+- **Point ahead:** Rey Riordan and Jey Labadorf join me on a panel later today, on their experience as student support on faculty projects that grew into student services.
 - **What the panel covers:** the learning experience, the faculty support experience, University administration, the security hoops they had to jump through, and what third-party help they got.
 
 ## 11 · Up next (44–45 min)
