@@ -25,7 +25,7 @@
   - Teaching the tech: Jim Samuel and Carmela Scala
   - Research: Sonia Yaco
   - Research → teaching: OSCE: Dr. Siobhan Corbett and Rey Riordan
-  - Student and dept. use: Lexus: Rahul and Jey Labadorf; Dean's grant with Barbara Tufuto, Scott Parrot, and others
+  - Student and dept. use: Lexus: Rahul Mittal and Jey Labadorf; Dean's grant with Barbara Tufuto, Scott Parrot, and others
   - University services: VHS: Rebecca Brody, via Scott Parrot
   - Securing research: Laura Ramírez; runs on a Mac laptop with local AI (Ollama), anonymized PHI data
 - **Say:** Who they are, and what I did as the fly on the wall.
@@ -59,7 +59,7 @@
 ## 7 · Stage 3: Student and departmental use (26–33 min)
 
 - **On screen:** "Who hosts it, secures it, and backs it up?"
-- **Story:** Lexus. It got the Dean's grant and student support (Rahul and Jey)
+- **Story:** Lexus. It got the Dean's grant and student support (Rahul Mittal and Jey Labadorf)
 
 ## 8 · Stage 4: University services (33–39 min)
 

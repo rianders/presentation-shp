@@ -27,10 +27,12 @@
 ## 4 · Rey Riordan (10–15 min)
 
 - **On screen:** Rey Riordan. OSCE Simulation.
+- **Journey line:** [From their prep answers. See `panel-prep.md`.]
 
 ## 5 · Jey Labadorf (10–15 min)
 
 - **On screen:** Jey Labadorf. Lexus.
+- **Journey line:** [From their prep answers. See `panel-prep.md`.]
 
 ## 6–11 · Discussion questions (15 min)
 
@@ -53,5 +55,7 @@ One question per slide, in this order:
 
 ## Open Items
 
+- [ ] Send `panel-prep.md` to Rey and Jey, and collect their six answers
+- [ ] Build a journey line or slide per project from their answers
 - [ ] Rey and Jey's titles or programs, if you want them on the panelist slide
 - [ ] Optional prep meeting with Rey and Jey before the panel
