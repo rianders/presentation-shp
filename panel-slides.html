@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Students Building AI at Rutgers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<!--
+  Panel deck derived from panel-outline.md, which stays the source of truth.
+  Keys: → / Space / PageDown next · ← / PageUp back · Home / End · F fullscreen · N notes · P presenter view
+  Presenter view opens a second window with the notes, a timer, and the next slide.
+  Both windows stay in sync. Over file:// only one direction may sync, so for two screens serve the
+  folder first: python3 -m http.server 8000, then open http://localhost:8000/slides.html
+-->
+<style>
+  :root {
+    --ink: #1C2B39;
+    --slate: #4E5D6C;
+    --scarlet: #CC0033;
+    --deep: #A8002A;
+    --step1: #EEF3F6;
+    --bg: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--ink); overflow: hidden; }
+  body {
+    font-family: "Source Sans 3", "Source Sans Pro", "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+  }
+
+  /* Fixed 1600x900 canvas, scaled to fit the window */
+  .deck {
+    position: absolute; left: 50%; top: 50%;
+    width: 1600px; height: 900px;
+    transform-origin: center;
+    background: var(--bg);
+  }
+  .slide {
+    position: absolute; inset: 0;
+    padding: 110px 140px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .slide[hidden] { display: none; }
+
+  .kicker { font-size: 30px; font-weight: 600; color: var(--slate); margin: 0 0 18px; }
+  h1 { font-size: 96px; line-height: 1.05; font-weight: 700; margin: 0; letter-spacing: -0.01em; }
+  h2 { font-size: 80px; line-height: 1.08; font-weight: 700; margin: 0; letter-spacing: -0.01em; }
+  .sub { font-size: 40px; color: var(--slate); margin: 28px 0 0; line-height: 1.3; }
+  .tools { font-size: 36px; color: var(--slate); margin: 44px 0 0; }
+  .rule { width: 96px; height: 8px; background: var(--scarlet); margin: 0 0 40px; border: 0; }
+
+  /* Question slides: the room answers, not the slide */
+  .question h2 { font-size: 68px; font-weight: 600; max-width: 1250px; }
+  .question .kicker::before { content: "?"; display: inline-grid; place-items: center;
+    width: 40px; height: 40px; margin-right: 14px; border-radius: 50%;
+    background: var(--deep); color: #fff; font-size: 26px; font-weight: 700; vertical-align: 2px; }
+
+  ol.takeaways { margin: 48px 0 0; padding: 0; list-style: none; counter-reset: t; }
+  ol.takeaways li { counter-increment: t; font-size: 42px; line-height: 1.25; margin: 0 0 24px;
+    padding-left: 84px; position: relative; }
+  ol.takeaways li::before { content: counter(t); position: absolute; left: 0; top: 2px;
+    width: 56px; height: 56px; border-radius: 50%; background: var(--step1);
+    display: grid; place-items: center; font-size: 32px; font-weight: 700; }
+
+
+  /* Partners */
+  ul.partners { list-style: none; margin: 48px 0 0; padding: 0; }
+  ul.partners li { font-size: 36px; line-height: 1.3; margin: 0 0 22px; color: var(--slate); }
+  ul.partners b { display: inline-block; width: 420px; color: var(--ink); font-weight: 600; }
+
+  /* Presenter view: second window with notes, timer, and what's next */
+  body.presenter { background: #10191F; overflow: auto; }
+  body.presenter .deck, body.presenter .count { display: none; }
+  #presenter { display: none; }
+  body.presenter #presenter {
+    display: grid; grid-template-columns: 1fr 340px; gap: 32px;
+    padding: 32px; min-height: 100vh; box-sizing: border-box; color: #F2F6F8;
+  }
+  #pnow { font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; color: #9FB3C2; margin: 0 0 10px; }
+  #ptitle { font-size: 40px; font-weight: 700; line-height: 1.1; margin: 0 0 24px; }
+  #pnotes { font-size: 26px; line-height: 1.45; }
+  #pnotes ul { margin: 0; padding-left: 1.1em; }
+  #pnotes li { margin: 0 0 14px; }
+  #pnotes .none { color: #9FB3C2; font-style: italic; }
+  .pside { border-left: 1px solid #2C3C49; padding-left: 28px; }
+  #ptimer { font-size: 56px; font-weight: 700; font-variant-numeric: tabular-nums; margin: 0; }
+  #pclock { font-size: 20px; color: #9FB3C2; margin: 4px 0 28px; }
+  .plabel { font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #9FB3C2; margin: 0 0 8px; }
+  #pnext { font-size: 24px; line-height: 1.25; margin: 0 0 28px; }
+  #pcount { font-size: 20px; color: #9FB3C2; }
+  .phint { font-size: 15px; color: #9FB3C2; line-height: 1.5; margin-top: 28px; }
+
+  .full { padding: 0; }
+  .full img { width: 100%; height: 100%; display: block; }
+
+  .count { position: absolute; right: 44px; bottom: 30px; font-size: 20px; color: var(--slate); }
+
+  /* Speaker notes: hidden unless N is pressed */
+  .notes { display: none; }
+  body.show-notes .slide:not([hidden]) .notes {
+    display: block; position: absolute; left: 0; right: 0; bottom: 0;
+    max-height: 45%; overflow: auto;
+    padding: 24px 140px; background: #1C2B39F2; color: #fff;
+    font-size: 24px; line-height: 1.4;
+  }
+  .notes ul { margin: 0; padding-left: 1.1em; }
+</style>
+</head>
+<body>
+
+<main class="deck" id="deck">
+
+  <section class="slide">
+    <p class="kicker">Panel</p>
+    <h1>Students building<br>AI at Rutgers</h1>
+    <p class="sub">Jey and Rey · Moderated by Rick Anderson</p>
+    <aside class="notes"><ul>
+      <li>You've both been students working with faculty on AI projects that had an early life at Rutgers.</li>
+      <li>Why the room should care: these stories are for faculty, staff, and administration.</li>
+    </ul></aside>
+  </section>
+
+  <section class="slide">
+    <p class="kicker">The panelists</p>
+    <h2>Two projects,<br>two paths</h2>
+    <ul class="partners">
+      <li><b>Rey</b> OSCE Simulation</li>
+      <li><b>Jey</b> Lexus</li>
+    </ul>
+    <aside class="notes"><ul>
+      <li>How faculty found you, or how you found the faculty.</li>
+      <li>The projects changed along the way.</li>
+    </ul></aside>
+  </section>
+
+  <section class="slide">
+    <p class="kicker">How this works</p>
+    <h2>Stories first,<br>then questions</h2>
+    <p class="sub">10–15 minutes each · 15 minutes of discussion · then the room</p>
+  </section>
+
+  <section class="slide">
+    <hr class="rule">
+    <p class="kicker">First</p>
+    <h2>Rey</h2>
+    <p class="sub">OSCE Simulation</p>
+    <aside class="notes"><ul>
+      <li>10–15 minutes. How it started, what it needed, who you had to navigate at Rutgers.</li>
+    </ul></aside>
+  </section>
+
+  <section class="slide">
+    <hr class="rule">
+    <p class="kicker">Next</p>
+    <h2>Jey</h2>
+    <p class="sub">Lexus</p>
+    <aside class="notes"><ul>
+      <li>10–15 minutes. Same arc: the start, the changes, the units you had to work through.</li>
+    </ul></aside>
+  </section>
+
+  <section class="slide question">
+    <p class="kicker">Discussion</p>
+    <h2>Looking back, what would you have liked to know at the beginning?</h2>
+  </section>
+
+  <section class="slide question">
+    <p class="kicker">Discussion</p>
+    <h2>How did you host your project to get started?</h2>
+    <aside class="notes"><ul>
+      <li>Platforms, self-hosting, AWS, GCP, a laptop.</li>
+    </ul></aside>
+  </section>
+
+  <section class="slide question">
+    <p class="kicker">Discussion</p>
+    <h2>What changed in the AI tech from beginning to end?</h2>
+  </section>
+
+  <section class="slide question">
+    <p class="kicker">Discussion</p>
+    <h2>How is the current version hosted?</h2>
+  </section>
+
+  <section class="slide question">
+    <p class="kicker">Discussion</p>
+    <h2>What advice would you give faculty starting a new project?</h2>
+  </section>
+
+  <section class="slide question">
+    <p class="kicker">Discussion</p>
+    <h2>What support would have helped?</h2>
+    <p class="tools">Administration · IT · Departmental</p>
+  </section>
+
+  <section class="slide question">
+    <p class="kicker">Over to you</p>
+    <h2>Questions from the room</h2>
+  </section>
+
+  <section class="slide">
+    <p class="kicker">Thank you</p>
+    <h2>Jey and Rey</h2>
+    <aside class="notes"><ul>
+      <li>Close on what the University could do differently for the next student in their seat.</li>
+    </ul></aside>
+  </section>
+
+  <div class="count" id="count" aria-live="polite"></div>
+</main>
+
+<section id="presenter" aria-label="Presenter view">
+  <div>
+    <p id="pnow">Current slide</p>
+    <h1 id="ptitle"></h1>
+    <div id="pnotes"></div>
+  </div>
+  <div class="pside">
+    <p id="ptimer">00:00</p>
+    <p id="pclock"></p>
+    <p class="plabel">Next</p>
+    <p id="pnext"></p>
+    <p id="pcount"></p>
+    <p class="phint">Arrows move both windows. T resets the timer.</p>
+  </div>
+</section>
+
+<script>
+  const deck = document.getElementById('deck');
+  const slides = [...deck.querySelectorAll('.slide')];
+  const count = document.getElementById('count');
+  let i = 0;
+
+  function fit() {
+    const s = Math.min(innerWidth / 1600, innerHeight / 900);
+    deck.style.transform = `translate(-50%, -50%) scale(${s})`;
+  }
+
+  function show(n, quiet) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach((el, k) => el.hidden = k !== i);
+    count.textContent = `${i + 1} / ${slides.length}`;
+    count.hidden = slides[i].classList.contains('full');
+    history.replaceState(null, '', '#' + (i + 1));
+    paint();
+    if (!quiet) broadcast();
+  }
+
+  // --- Presenter view -------------------------------------------------
+  const isPresenter = location.search.includes('presenter');
+  const channel = ('BroadcastChannel' in window) ? new BroadcastChannel('deck-sync') : null;
+  let child = null, start = Date.now();
+
+  function headline(el) {
+    const h = el.querySelector('h1, h2');
+    const kicker = el.querySelector('.kicker');
+    const sub = el.querySelector('.sub');
+    const text = n => n.innerHTML.replace(/<br[^>]*>/gi, ' ').replace(/<[^>]+>/g, '').trim();
+    if (h) return (kicker ? kicker.textContent + ' — ' : '') + text(h);
+    if (el.classList.contains('full')) return 'Diagram: the pathway';
+    return sub ? sub.textContent : 'Slide';
+  }
+
+  function paint() {
+    if (!isPresenter) return;
+    const el = slides[i];
+    document.getElementById('ptitle').textContent = headline(el);
+    const notes = el.querySelector('.notes');
+    document.getElementById('pnotes').innerHTML =
+      notes ? notes.innerHTML : '<p class="none">No notes on this slide.</p>';
+    const next = slides[i + 1];
+    document.getElementById('pnext').textContent = next ? headline(next) : 'End of deck';
+    document.getElementById('pcount').textContent = `Slide ${i + 1} of ${slides.length}`;
+  }
+
+  function broadcast() {
+    if (channel) channel.postMessage(i);
+    try { localStorage.setItem('deck-slide', i + ':' + Date.now()); } catch (e) {}
+    try { if (child && !child.closed) child.postMessage({ slide: i }, '*'); } catch (e) {}
+    try { if (opener && !opener.closed) opener.postMessage({ slide: i }, '*'); } catch (e) {}
+  }
+
+  function receive(n) { if (n !== i) { show(n, true); } }
+
+  if (channel) channel.onmessage = e => receive(e.data);
+  addEventListener('storage', e => {
+    if (e.key === 'deck-slide' && e.newValue) receive(parseInt(e.newValue, 10));
+  });
+  addEventListener('message', e => {
+    if (e.data && typeof e.data.slide === 'number') receive(e.data.slide);
+  });
+
+  if (isPresenter) {
+    document.body.classList.add('presenter');
+    document.title = 'Presenter view';
+    setInterval(() => {
+      const s = Math.floor((Date.now() - start) / 1000);
+      document.getElementById('ptimer').textContent =
+        String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0');
+      document.getElementById('pclock').textContent =
+        new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+    }, 1000);
+    paint();
+  }
+
+  addEventListener('keydown', e => {
+    const k = e.key;
+    if (['ArrowRight', 'ArrowDown', ' ', 'PageDown', 'Enter'].includes(k)) { e.preventDefault(); show(i + 1); }
+    else if (['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'].includes(k)) { e.preventDefault(); show(i - 1); }
+    else if (k === 'Home') show(0);
+    else if (k === 'End') show(slides.length - 1);
+    else if (k === 'f' || k === 'F') {
+      document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen();
+    }
+    else if (k === 'n' || k === 'N') document.body.classList.toggle('show-notes');
+    else if (k === 't' || k === 'T') start = Date.now();
+    else if ((k === 'p' || k === 'P') && !isPresenter) {
+      const url = location.pathname + '?presenter=1#' + (i + 1);
+      child = open(url, 'presenter', 'width=1100,height=760');
+    }
+  });
+
+  // Click right two-thirds to advance, left third to go back
+  if (!isPresenter) addEventListener('click', e => show(e.clientX > innerWidth / 3 ? i + 1 : i - 1));
+  addEventListener('resize', fit);
+
+  fit();
+  show((parseInt(location.hash.slice(1), 10) || 1) - 1, true);
+</script>
+</body>
+</html>

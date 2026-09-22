@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="t d">
+  <title id="t">The pathway for faculty AI projects</title>
+  <desc id="d">Four stages, left to right. Two overlapping circles: Stage 1, Teaching the tech (Colab, Hugging Face, OpenRouter), and Stage 2, Research with and about the tech (Amarel, local AI with Ollama), marked with a gap: local AI needs a secure home off the work laptop. Chameleon Cloud sits in the overlap, fitting both. An arrow leads to Stage 3, Student and departmental use (local IT), marked with a gap: who hosts it, secures it, and backs it up? A second arrow leads to Stage 4, University services (Portkey, Shibboleth, RU Cloud on AWS, managed by OIT), marked with two gaps: these tools take expertise and aren't documented for this kind of use, and can homegrown edtech and research be supported? A caption reads: the projects do what's necessary, and integrating with central services is the hard part.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#4E5D6C"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Source Sans 3", "Source Sans Pro", "Segoe UI", Helvetica, Arial, sans-serif; fill: #1C2B39; }
+    .title { font-size: 52px; font-weight: 700; }
+    .sub { font-size: 26px; fill: #4E5D6C; }
+    .stage { font-size: 18px; font-weight: 600; fill: #4E5D6C; }
+    .name { font-size: 28px; font-weight: 700; }
+    .tools { font-size: 19px; fill: #4E5D6C; }
+    .both { font-size: 19px; font-weight: 700; }
+    .gap { font-size: 18px; font-weight: 600; fill: #A8002A; }
+    .icon { font-size: 14px; font-weight: 700; fill: #FFFFFF; }
+    .caption { font-size: 24px; font-style: italic; fill: #A8002A; }
+  </style>
+  <rect width="1600" height="900" fill="#FFFFFF"/>
+  <text class="title" x="80" y="92">The pathway</text>
+  <text class="sub" x="80" y="134">Where does a faculty AI project go as it scales?</text>
+
+  <!-- Stages 1 and 2: overlapping circles -->
+  <circle cx="330" cy="480" r="215" fill="#C5D7E2" fill-opacity="0.45"/>
+  <circle cx="600" cy="480" r="215" fill="#C5D7E2" fill-opacity="0.75"/>
+
+  <text class="stage" x="240" y="405" text-anchor="middle">Stage 1</text>
+  <text class="name" x="240" y="440" text-anchor="middle">Teaching</text>
+  <text class="name" x="240" y="472" text-anchor="middle">the tech</text>
+  <text class="tools" x="240" y="514" text-anchor="middle">Colab</text>
+  <text class="tools" x="240" y="540" text-anchor="middle">Hugging Face</text>
+  <text class="tools" x="240" y="566" text-anchor="middle">OpenRouter</text>
+
+  <text class="stage" x="465" y="455" text-anchor="middle">Both</text>
+  <text class="both" x="465" y="488" text-anchor="middle">Chameleon</text>
+  <text class="both" x="465" y="512" text-anchor="middle">Cloud</text>
+
+  <text class="stage" x="690" y="405" text-anchor="middle">Stage 2</text>
+  <text class="name" x="690" y="440" text-anchor="middle">Research</text>
+  <text class="tools" x="690" y="470" text-anchor="middle">with and about the tech</text>
+  <text class="tools" x="690" y="514" text-anchor="middle">Amarel (OARC)</text>
+  <text class="tools" x="690" y="540" text-anchor="middle">Local AI (Ollama)</text>
+  <circle cx="572" cy="738" r="11" fill="#A8002A"/><text class="icon" x="572" y="743" text-anchor="middle">!</text>
+  <text class="gap" x="592" y="744">Local AI needs a secure home</text>
+  <text class="gap" x="592" y="768">off the work laptop</text>
+
+  <!-- Arrow to stage 3 -->
+  <line x1="830" y1="480" x2="892" y2="480" stroke="#4E5D6C" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Stage 3 -->
+  <rect x="900" y="380" width="280" height="200" fill="#D3E1E9"/>
+  <text class="stage" x="924" y="420">Stage 3</text>
+  <text class="name" x="924" y="455">Student and</text>
+  <text class="name" x="924" y="487">departmental use</text>
+  <text class="tools" x="924" y="530">Local IT</text>
+  <circle cx="912" cy="628" r="11" fill="#A8002A"/><text class="icon" x="912" y="633" text-anchor="middle">!</text>
+  <text class="gap" x="932" y="634">Who hosts it, secures it,</text>
+  <text class="gap" x="932" y="658">and backs it up?</text>
+
+  <!-- Arrow to stage 4 -->
+  <line x1="1188" y1="480" x2="1250" y2="480" stroke="#4E5D6C" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Stage 4 -->
+  <rect x="1258" y="380" width="262" height="230" fill="#C5D7E2"/>
+  <text class="stage" x="1282" y="420">Stage 4</text>
+  <text class="name" x="1282" y="455">University</text>
+  <text class="name" x="1282" y="487">services</text>
+  <text class="tools" x="1282" y="526">Portkey, Shibboleth</text>
+  <text class="tools" x="1282" y="552">RU Cloud (AWS)</text>
+  <text class="stage" x="1282" y="588">Managed by OIT</text>
+  <circle cx="1270" cy="658" r="11" fill="#A8002A"/><text class="icon" x="1270" y="663" text-anchor="middle">!</text>
+  <text class="gap" x="1290" y="664">Takes expertise, and isn't</text>
+  <text class="gap" x="1290" y="688">documented for this use</text>
+  <circle cx="1270" cy="728" r="11" fill="#A8002A"/><text class="icon" x="1270" y="733" text-anchor="middle">!</text>
+  <text class="gap" x="1290" y="734">Can homegrown edtech</text>
+  <text class="gap" x="1290" y="758">and research be supported?</text>
+
+  <!-- Caption -->
+  <text class="caption" x="800" y="830" text-anchor="middle">The projects do what's necessary. Integrating with central services is the hard part.</text>
+</svg>

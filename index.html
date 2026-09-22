@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rutgers AI Talks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink: #1C2B39; --slate: #4E5D6C; --scarlet: #CC0033; --step1: #EEF3F6; --bg: #FFFFFF; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 88px 16px 96px; }
+  .rule { width: 96px; height: 8px; background: var(--scarlet); border: 0; margin: 0 0 32px; }
+  h1 { font-size: clamp(36px, 6vw, 56px); line-height: 1.1; margin: 0 0 12px; letter-spacing: -0.01em; }
+  .sub { font-size: 20px; color: var(--slate); margin: 0 0 56px; }
+  a.card {
+    display: block; text-decoration: none; color: inherit;
+    background: var(--step1); padding: 28px 32px; margin: 0 0 20px;
+    border-left: 8px solid var(--scarlet);
+  }
+  a.card:hover, a.card:focus { background: #E1EAF0; outline: none; }
+  a.card h2 { font-size: 28px; margin: 0 0 6px; }
+  a.card p { margin: 0; color: var(--slate); font-size: 18px; }
+  .keys { font-size: 17px; color: var(--slate); margin-top: 48px; }
+  .keys kbd {
+    font: inherit; background: var(--step1); border-radius: 4px;
+    padding: 2px 7px; border: 1px solid #C5D7E2;
+  }
+  .files { font-size: 17px; color: var(--slate); }
+  .files a { color: var(--ink); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #EDF2F5; --slate: #A8BAC7; --scarlet: #FF4D6D; --step1: #1B2732; --bg: #101820;
+    }
+    :root:not([data-theme="light"]) a.card:hover { background: #24323F; }
+    :root:not([data-theme="light"]) .keys kbd { border-color: #33444F; }
+  }
+  :root[data-theme="dark"] {
+    --ink: #EDF2F5; --slate: #A8BAC7; --scarlet: #FF4D6D; --step1: #1B2732; --bg: #101820;
+  }
+</style>
+</head>
+<body>
+<main>
+  <hr class="rule">
+  <h1>Faculty AI projects at Rutgers</h1>
+  <p class="sub">Two talks for SHP and IT faculty. Rick Anderson, Director of Emerging Technology, Rutgers UOES.</p>
+
+  <a class="card" href="slides.html">
+    <h2>From classroom to campus service →</h2>
+    <p>The morning talk. Lessons from faculty who teach and research AI.</p>
+  </a>
+
+  <a class="card" href="panel-slides.html">
+    <h2>Students building AI at Rutgers →</h2>
+    <p>The afternoon panel with Jey and Rey.</p>
+  </a>
+
+  <p class="keys">
+    In either deck: <kbd>→</kbd> next, <kbd>←</kbd> back, <kbd>F</kbd> fullscreen,
+    <kbd>N</kbd> notes, <kbd>P</kbd> presenter view, <kbd>T</kbd> reset timer.
+  </p>
+  <p class="files">
+    Source: <a href="talk-outline.md">talk-outline.md</a> ·
+    <a href="panel-outline.md">panel-outline.md</a> ·
+    <a href="journey.svg">journey.svg</a>
+  </p>
+</main>
+</body>
+</html>
