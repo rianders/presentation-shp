@@ -64,6 +64,7 @@ Derive slides and speaker notes from `talk-outline.md` and keep that file author
 ## Content rules
 
 - **Do not invent project details.** Bracketed placeholders like `[Fill in: ...]` stay as placeholders until Rick supplies the content. List them under Open Items in `talk-outline.md`.
+- **No honorifics.** No Dr., Prof., or post-nominals for anyone, on slides or in notes. Everyone named holds a doctorate except Rick Anderson, Rey Riordan, and Jey Labadorf, so titles would sort the room rather than level it.
 - Use names exactly as spelled here: Jim Samuel, Carmela Scala, Sonia Yaco, Bala Desinghu, Claire Warwick, Siobhan Corbett, Rey Riordan, Rebecca Brody, Scott Parrot, Rahul Mittal, Jey Labadorf, Laura Ramírez, Barbara Tufuto, Tom Vossler, Andy Paige, Eric Marshall.
 - Platform names: Ollama, Amarel (OARC's cluster), Chameleon Cloud, Google Colab, Hugging Face, OpenRouter, Portkey, Amazon Bedrock, AgentCore, Shibboleth.
 - Portkey, Shibboleth, and RU Cloud (AWS) are grouped as centrally supported tools, hosted or managed by OIT and Andy, that take technical expertise to engage with. They belong in Stage 4.
