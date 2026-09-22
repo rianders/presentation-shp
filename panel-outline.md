@@ -55,7 +55,6 @@ One question per slide, in this order:
 
 ## Open Items
 
-- [ ] Send `panel-prep.md` to Rey and Jey, and collect their six answers
+- [ ] Collect Rey and Jey's journey answers (email sent)
 - [ ] Build a journey line or slide per project from their answers
-- [ ] Rey and Jey's titles or programs, if you want them on the panelist slide
-- [ ] Optional prep meeting with Rey and Jey before the panel
+- [ ] Optional prep meeting with Rey and Jey before the panel (offered in the email)

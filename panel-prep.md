@@ -32,6 +32,6 @@ These are the discussion questions, so nothing will surprise you:
 
 ## Open Items
 
-- [ ] Send this to Rey and Jey
-- [ ] Optional prep meeting before the panel
+- [x] Email sent to Rey and Jey, with the plan and the offer to meet beforehand
+- [ ] Collect their six answers
 - [ ] Build a journey slide per project once they answer
