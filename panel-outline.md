@@ -49,7 +49,8 @@ All six on one slide, so Rey and Jey can pick a thread and answer in any order:
 
 ## 8 · Thank you
 
-- **Say:** Close on what the University could do differently for the next student in their seat.
+- **On screen:** "What could the University do differently for the next student in your seat?" with both names.
+- **Say:** Last word to each panelist, then thanks.
 
 ---
 
