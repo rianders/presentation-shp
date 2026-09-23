@@ -110,7 +110,7 @@
 
   /* Touch devices: a notes button, since there's no keyboard */
   #touchbar { display: none; }
-  @media (pointer: coarse) {
+  @media (pointer: coarse), (max-width: 820px) {
     #touchbar {
       display: flex; gap: 10px; position: fixed; left: 12px; bottom: 12px; z-index: 5;
     }
