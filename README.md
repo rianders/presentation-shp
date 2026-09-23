@@ -7,6 +7,16 @@ Two talks for SHP and IT faculty, by Rick Anderson, Director of Emerging Technol
 
 The outlines are the source of truth. The decks are derived from them.
 
+Backup PDFs: [`slides.pdf`](slides.pdf) and [`panel-slides.pdf`](panel-slides.pdf). Regenerate them with:
+
+```
+for f in slides panel-slides; do
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new \
+    --no-pdf-header-footer --virtual-time-budget=8000 \
+    --print-to-pdf="$PWD/$f.pdf" "file://$PWD/$f.html"
+done
+```
+
 ## Viewing
 
 Open `index.html`, or run a local server so the presenter view can sync two windows:

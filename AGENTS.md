@@ -88,6 +88,7 @@ Unplaced: Carmela Scala, who appears on slide 2 with Jim Samuel.
 
 ## Checks before finishing a change
 
+- Regenerate `slides.pdf` and `panel-slides.pdf` (see README) whenever slide content changes.
 - Render any SVG you touch and look at it (for example, a headless browser screenshot) to confirm nothing overlaps or clips.
 - Confirm stage names, tools, and gaps in `journey.svg` still match `talk-outline.md`.
 - Update the SVG `<desc>` whenever the visible content changes.

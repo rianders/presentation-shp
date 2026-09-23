@@ -92,6 +92,22 @@
   #pcount { font-size: 20px; color: #9FB3C2; }
   .phint { font-size: 15px; color: #9FB3C2; line-height: 1.5; margin-top: 28px; }
 
+  /* Print / PDF: every slide on its own landscape page */
+  @media print {
+    @page { size: 1600px 900px; margin: 0; }
+    html, body { background: #fff !important; height: auto; overflow: visible; }
+    .deck {
+      position: static !important; transform: none !important;
+      width: 1600px; height: auto; left: auto; top: auto;
+    }
+    .slide, .slide[hidden] {
+      display: flex !important; position: relative !important; inset: auto !important;
+      width: 1600px; height: 900px; break-after: page; page-break-after: always;
+    }
+    .slide:last-of-type { break-after: auto; page-break-after: auto; }
+    .count, .notes, #presenter { display: none !important; }
+  }
+
   .full { padding: 0; }
   .full img { width: 100%; height: 100%; display: block; }
 
