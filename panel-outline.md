@@ -34,20 +34,20 @@
 - **On screen:** Jey Labadorf. LLEXIS.
 - **Journey line:** [From their prep answers. See `panel-prep.md`.]
 
-## 6–11 · Discussion questions (15 min)
+## 6 · The questions (15 min)
 
-One question per slide, in this order:
+All six on one slide, so Rey and Jey can pick a thread and answer in any order:
 
 1. Looking back, what would you have liked to know at the beginning?
-2. How did you host your project to get started? (platforms, self-hosting, AWS, GCP, a laptop)
+2. How did you host the project to get started? (platforms, self-hosting, AWS, GCP, a laptop)
 3. What changed in the AI tech from beginning to end?
 4. How is the current version hosted?
 5. What advice would you give faculty starting a new project?
-6. What support would have helped? (administration, IT, departmental)
+6. What support would have helped: administration, IT, departmental?
 
-## 12 · Questions from the room
+## 7 · Questions from the room
 
-## 13 · Thank you
+## 8 · Thank you
 
 - **Say:** Close on what the University could do differently for the next student in their seat.
 

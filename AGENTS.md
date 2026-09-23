@@ -23,7 +23,7 @@ AGENTS.md            This file
 journey.svg          Four-stage pathway diagram (1600x900, slide-ready)
 panel-outline.md     Source of truth for the afternoon panel with Rey and Jey
 panel-prep.md        Journey questions to send the panelists before the panel
-panel-slides.html    Panel deck, derived from panel-outline.md (same design and keys)
+panel-slides.html    Panel deck (8 slides), derived from panel-outline.md (same design and keys)
 slides.html          HTML slide deck, derived from talk-outline.md. Keys: arrows/space move,
                      F fullscreen, N notes overlay, P presenter window, T resets the timer.
                      Two-window sync needs a served origin: python3 -m http.server 8000
