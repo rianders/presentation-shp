@@ -92,6 +92,39 @@
   #pcount { font-size: 20px; color: #9FB3C2; }
   .phint { font-size: 15px; color: #9FB3C2; line-height: 1.5; margin-top: 28px; }
 
+  /* Narrow screens: drop the fixed 16:9 canvas and reflow as a portrait page */
+  @media (max-width: 820px) {
+    html, body { height: auto; overflow: auto; background: var(--bg); }
+    .deck {
+      position: static !important; transform: none !important;
+      width: 100% !important; height: auto !important; left: auto; top: auto;
+    }
+    .slide {
+      position: relative; inset: auto;
+      width: 100%; min-height: 100svh; min-height: 100vh;
+      padding: 40px 20px 110px; justify-content: center;
+    }
+    .kicker { font-size: clamp(15px, 4.2vw, 30px); margin-bottom: 12px; }
+    h1 { font-size: clamp(34px, 10vw, 96px); }
+    h2 { font-size: clamp(30px, 8.6vw, 80px); }
+    .sub { font-size: clamp(18px, 5vw, 40px); margin-top: 18px; }
+    .tools { font-size: clamp(16px, 4.4vw, 36px); margin-top: 24px; }
+    .rule { width: 64px; height: 6px; margin-bottom: 24px; }
+    .question h2 { font-size: clamp(26px, 7.4vw, 68px); max-width: none; }
+
+    ul.partners { margin-top: 28px; }
+    ul.partners li { font-size: clamp(16px, 4.4vw, 36px); margin-bottom: 18px; }
+    ul.partners b { display: block; width: auto; font-size: 0.82em; margin-bottom: 2px; }
+
+    ol.takeaways { margin-top: 28px; }
+    ol.takeaways li { font-size: clamp(18px, 5vw, 42px); padding-left: 52px; margin-bottom: 20px; }
+    ol.takeaways li::before { width: 36px; height: 36px; font-size: 20px; }
+
+    .slide.full { padding: 8px; }
+    .full img { width: 100%; height: auto; }
+    .count { right: 20px; bottom: 76px; }
+  }
+
   /* Print / PDF: every slide on its own landscape page */
   @media print {
     @page { size: 1600px 900px; margin: 0; }
@@ -119,13 +152,14 @@
       color: #fff; background: #1C2B39E6; border: 0; border-radius: 999px;
       padding: 12px 18px; -webkit-tap-highlight-color: transparent;
     }
-    body.show-notes #touchbar button.notes { background: var(--deep); }
+    body.show-notes #touchbar button.notes-toggle { background: var(--deep); }
     body.presenter #touchbar { left: 12px; bottom: 12px; }
   }
   /* Notes overlay: taller and scrollable on small screens */
   @media (max-width: 820px) {
     body.show-notes .slide:not([hidden]) .notes {
-      max-height: 60%; padding: 18px 20px 70px; font-size: 17px;
+      max-height: 62% !important; padding: 18px 20px 76px !important;
+      font-size: 17px !important; line-height: 1.45 !important;
     }
   }
   /* Presenter view on a phone: one column */
@@ -295,7 +329,7 @@
 </main>
 
 <div id="touchbar">
-  <button data-act="notes" class="notes" type="button">Notes</button>
+  <button data-act="notes" class="notes-toggle" type="button">Notes</button>
   <button data-act="presenter" type="button">Presenter</button>
   <button data-act="prev" type="button" aria-label="Previous slide">←</button>
   <button data-act="next" type="button" aria-label="Next slide">→</button>
