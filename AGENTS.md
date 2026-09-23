@@ -66,6 +66,7 @@ Derive slides and speaker notes from `talk-outline.md` and keep that file author
 - **Do not invent project details.** Bracketed placeholders like `[Fill in: ...]` stay as placeholders until Rick supplies the content. List them under Open Items in `talk-outline.md`.
 - **No honorifics.** No Dr., Prof., or post-nominals for anyone, on slides or in notes. Everyone named holds a doctorate except Rick Anderson, Rey Riordan, and Jey Labadorf, so titles would sort the room rather than level it.
 - Use names exactly as spelled here: Jim Samuel, Carmela Scala, Sonia Yaco, Bala Desinghu, Claire Warwick, Siobhan Corbett, Rey Riordan, Rebecca Brody, Scott Parrot, Rahul Mittal, Jey Labadorf, Laura Ramírez, Barbara Tufuto, Tom Vossler, Andy Paige, Eric Marshall.
+- Project names: COMPASS (the OSCE simulation, Corbett and Riordan), LLEXIS (Mittal and Labadorf), VHS (Brody).
 - Platform names: Ollama, Amarel (OARC's cluster), Chameleon Cloud, Google Colab, Hugging Face, OpenRouter, Portkey, Amazon Bedrock, AgentCore, Shibboleth.
 - Portkey, Shibboleth, and RU Cloud (AWS) are grouped as centrally supported tools, hosted or managed by OIT and Andy, that take technical expertise to engage with. They belong in Stage 4.
 - Do not describe features of Portkey or the AWS relationship in detail. Those belong to Andy and Eric's talk.
@@ -82,7 +83,7 @@ Derive slides and speaker notes from `talk-outline.md` and keep that file author
 | 10. Closing thoughts | Students are building this. With no dedicated resource, involving students is a practical decision, and they should be learning from it. Can we create more support for them? Points ahead to the panel with Rey and Jey later that day. |
 | 8. Stage 4, University services | VHS (Brody, via Parrot): a chatbot/GPT project becoming a standalone service project for students. |
 
-| 4. The pathway | OSCE Simulation (Corbett and Riordan): research that became an educational tool, so movement isn't one way. |
+| 4. The pathway | COMPASS, the OSCE simulation (Corbett and Riordan): research that became an educational tool, so movement isn't one way. |
 
 Unplaced: Carmela Scala, who appears on slide 2 with Jim Samuel.
 

@@ -24,7 +24,7 @@
 - **On screen:** Six projects, labeled by where they sit on the pathway.
   - Teaching the tech: Jim Samuel and Carmela Scala
   - Research: Sonia Yaco
-  - Research → teaching: OSCE: Siobhan Corbett and Rey Riordan
+  - Research → teaching: COMPASS: Siobhan Corbett and Rey Riordan
   - Student and dept. use: LLEXIS: Rahul Mittal and Jey Labadorf; Dean's grant with Barbara Tufuto, Scott Parrot, and others
   - University services: VHS: Rebecca Brody, via Scott Parrot
   - Securing research: Laura Ramírez; runs on a Mac laptop with local AI (Ollama), anonymized PHI data
@@ -39,7 +39,7 @@
 ## 4 · The pathway (10–13 min)
 
 - **On screen:** The pathway diagram (`journey.svg`).
-- **Say:** Walk the four stages. The hard part is each move to the next one. Movement isn't one way: the OSCE Simulation started as research and became an educational tool.
+- **Say:** Walk the four stages. The hard part is each move to the next one. Movement isn't one way: COMPASS, the OSCE simulation, started as research and became an educational tool.
 
 ## 5 · Stage 1: Teaching the tech (13–19 min)
 

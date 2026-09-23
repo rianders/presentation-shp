@@ -2,7 +2,7 @@
 
 *Panel with Rey and Jey. Rick Anderson moderating.*
 
-**Panelists:** Rey Riordan (OSCE Simulation) and Jey Labadorf (LLEXIS)
+**Panelists:** Rey Riordan (COMPASS) and Jey Labadorf (LLEXIS)
 **Format:** 10–15 minutes each, then 15 minutes of discussion leading into audience questions
 **Premise:** Both have been students working with faculty on AI projects that had an early life at Rutgers. They navigated the University, its units, and the work of figuring out what a project needed and how to make it happen here.
 **Why it matters:** These stories are for faculty, staff, and administration. They're the student side of the morning talk (`talk-outline.md`).
@@ -17,7 +17,7 @@
 
 ## 2 · The panelists
 
-- **On screen:** Rey Riordan, OSCE Simulation. Jey Labadorf, LLEXIS.
+- **On screen:** Rey Riordan, COMPASS. Jey Labadorf, LLEXIS.
 - **Say:** How faculty found you, or how you found the faculty. The projects changed along the way.
 
 ## 3 · How this works
@@ -26,7 +26,7 @@
 
 ## 4 · Rey Riordan (10–15 min)
 
-- **On screen:** Rey Riordan. OSCE Simulation.
+- **On screen:** Rey Riordan. COMPASS.
 - **Journey line:** [From their prep answers. See `panel-prep.md`.]
 
 ## 5 · Jey Labadorf (10–15 min)
