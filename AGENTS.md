@@ -77,8 +77,8 @@ Derive slides and speaker notes from `talk-outline.md` and keep that file author
 |---|---|
 | 3. The pain point | Laura Ramírez: security document for research that runs entirely on a Mac laptop with local-only AI (Ollama) and anonymized PHI data. The live example. |
 | 5. Stage 1, Teaching the tech | Jim Samuel: his students get a client and use the latest AI tech. Emotional accuracy in LLM translation, then guardrails for a postpartum chatbot. |
-| 6. Stage 2, Research | Sonia Yaco, "What can AI do with special collections?" (The American Archivist, 2025; with Desinghu, then at OARC, Warwick, and Rick) and Chameleon Cloud, automated with AI agents to ease IT management. Lexus began here too, which bridges to Stage 3. |
-| 7. Stage 3, Student and departmental use | Lexus: it got the Dean's grant and student support. Rahul Mittal and Jey Labadorf, with Barbara Tufuto, Scott Parrot, and others. |
+| 6. Stage 2, Research | Sonia Yaco, "What can AI do with special collections?" (The American Archivist, 2025; with Desinghu, then at OARC, Warwick, and Rick) and Chameleon Cloud, automated with AI agents to ease IT management. LLEXIS began here too, which bridges to Stage 3. |
+| 7. Stage 3, Student and departmental use | LLEXIS: it got the Dean's grant and student support. Rahul Mittal and Jey Labadorf, with Barbara Tufuto, Scott Parrot, and others. |
 | 10. Closing thoughts | Students are building this. With no dedicated resource, involving students is a practical decision, and they should be learning from it. Can we create more support for them? Points ahead to the panel with Rey and Jey later that day. |
 | 8. Stage 4, University services | VHS (Brody, via Parrot): a chatbot/GPT project becoming a standalone service project for students. |
 

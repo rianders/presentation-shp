@@ -1,6 +1,6 @@
 # Panel prep: map your project journey
 
-For Rey Riordan (OSCE Simulation) and Jey Labadorf (Lexus), ahead of the panel.
+For Rey Riordan (OSCE Simulation) and Jey Labadorf (LLEXIS), ahead of the panel.
 
 The panel works best if the room can see where each project traveled, not just where it ended up. Fill in the six steps below for your project. Short answers are fine, a line or two each. Rick will use them to build a journey slide for each of you, and they double as the spine of your 10–15 minutes.
 

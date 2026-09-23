@@ -25,7 +25,7 @@
   - Teaching the tech: Jim Samuel and Carmela Scala
   - Research: Sonia Yaco
   - Research → teaching: OSCE: Siobhan Corbett and Rey Riordan
-  - Student and dept. use: Lexus: Rahul Mittal and Jey Labadorf; Dean's grant with Barbara Tufuto, Scott Parrot, and others
+  - Student and dept. use: LLEXIS: Rahul Mittal and Jey Labadorf; Dean's grant with Barbara Tufuto, Scott Parrot, and others
   - University services: VHS: Rebecca Brody, via Scott Parrot
   - Securing research: Laura Ramírez; runs on a Mac laptop with local AI (Ollama), anonymized PHI data
 - **Say:** Who they are, and what I did as the fly on the wall.
@@ -53,13 +53,13 @@
 - **Tools (say, don't show):** Amarel, Chameleon Cloud, local AI (Ollama)
 - **Say:** Faculty research can include local AI like Ollama. To scale, it has to move off the work laptop to other platforms or secure places to run it.
 - **Stories:** Sonia Yaco, "What can AI do with special collections?" (The American Archivist, 2025), co-authored with Bala Desinghu (at OARC then, Harvard's Kempner Institute now), Claire Warwick, and me; and Chameleon, automated with AI agents to make IT management easier
-- **Bridge to Stage 3:** Lexus started as a research project too, before the Dean's grant
+- **Bridge to Stage 3:** LLEXIS started as a research project too, before the Dean's grant
 - **Reference:** `research/chameleon.md`, `research/yaco-paper.md`
 
 ## 7 · Stage 3: Student and departmental use (26–33 min)
 
 - **On screen:** "Who hosts it, secures it, and backs it up?"
-- **Story:** Lexus. It got the Dean's grant and student support (Rahul Mittal and Jey Labadorf)
+- **Story:** LLEXIS. It got the Dean's grant and student support (Rahul Mittal and Jey Labadorf)
 
 ## 8 · Stage 4: University services (33–39 min)
 
